@@ -1,0 +1,48 @@
+.main-bg {
+  /* background-image:
+    url('../img/bg-section-1.png'),
+    url('../img/grid.svg');
+  background-size: cover;
+  background-position: center center;
+  color: var(--white-color); */
+}
+
+.white-bg {
+  background: var(--white-color);
+  color: var(--primary-color);
+}
+
+.main-content {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 3rem var(--gap);
+}
+
+.secondary-content {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 2rem var(--gap);
+}
+
+.section {
+  min-height: 80vh;
+}
+
+.menu-spacing {
+  height: 65px;
+}
+
+body .full-width {
+  width: 100%;
+  flex: 1 1 100%;
+}
+
+.yellow{
+  color: var(--tertiary-color) ;
+  font-weight: 600;
+}
+
+.red{
+  color: var(--secondary-color) ;
+  font-weight: 600;
+}
