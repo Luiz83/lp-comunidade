@@ -16,9 +16,7 @@
   grid-area: video;
 }
 
-.text-grey{
-
-}
+.text-grey {}
 
 .intro-content {
   position: relative;
@@ -203,9 +201,11 @@
   background-color: var(--light-gray-color);
   vertical-align: top;
 }
+
 .cardUp {
   flex: 1;
 }
+
 .card img {
   width: 8rem;
   height: auto;
@@ -603,7 +603,7 @@
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   width: 100%;
   text-align: center;
@@ -717,13 +717,13 @@ sup {
   line-height: 4rem;
 }
 
-#payment-section .news-content{
+#payment-section .news-content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.content .img-container{
+.content .img-container {
   justify-content: flex-start;
 }
 
@@ -736,6 +736,48 @@ sup {
   color: #494a5a;
   font-style: italic;
 }
+
+.assurance-content {
+  max-width: 60vw;
+  margin: 0 auto;
+  padding-top: 0;
+}
+
+.assurance-content .assurance-container {
+  max-height: 60vh;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-content: center;
+  align-self: center;
+}
+
+.assurance-content h3 {
+  text-align: center;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+
+.assurance-content p {
+  display: flex;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #9C9C9C;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: 0;
+}
+
+.assurance-content .container {
+  width: 15rem;
+}
+
+.assurance-content img {
+  width: auto;
+  height: 100%;
+}
+
+
 
 /* faq css */
 
@@ -888,9 +930,24 @@ sup {
   .third-info-content {
     padding: 0 3.5rem;
   }
+
 }
 
 @media (max-width: 860px) {
+  .assurance-content {
+    max-width: 90vw;
+  }
+
+  .assurance-content .assurance-container {
+    max-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-content: center;
+    align-self: center;
+    font-size: 1rem;
+  }
 
   .container {
     max-width: 70rem;
@@ -912,7 +969,7 @@ sup {
     justify-content: space-around;
     gap: .5rem;
     align-items: flex-start;
-    align-content:flex-start;
+    align-content: flex-start;
     flex-direction: row;
   }
 
@@ -999,9 +1056,11 @@ sup {
 
 
 @media(max-width: 450px) {
-  .cardUp{
+
+  .cardUp {
     flex: none;
   }
+
   .details {
     grid-area: details;
     display: flex;
