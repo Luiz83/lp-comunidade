@@ -207,8 +207,8 @@
 
 /* Depoimentos */
 .card {
-  width: 40rem;
-  min-height: 35rem;
+  width: 36rem;
+  min-height: 33  rem;
   border-radius: 1rem;
   background-color: var(--light-gray-color);
   vertical-align: top;
@@ -216,6 +216,7 @@
 
 .cardUp {
   flex: 1;
+  min-height: 40rem !important;
 }
 
 .card img {
@@ -1028,6 +1029,9 @@ sup {
 }
 
 @media (max-width: 1000px) {
+  .cardUp{
+    flex: none;
+  }
   .third-panel {
     padding: 2rem 5rem;
   }
@@ -1256,10 +1260,6 @@ sup {
     font-size: .8rem;
     font-weight: bold;
     margin: 0;
-  }
-
-  .cardUp {
-    flex-direction: column;
   }
 
   .details {
