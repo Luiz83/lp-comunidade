@@ -1047,6 +1047,9 @@ sup {
 }
 
 @media (max-width: 860px) {
+  .button-buy {
+    min-width: 30rem;
+  }
   .assurance-content {
     max-width: 90vw;
   }
