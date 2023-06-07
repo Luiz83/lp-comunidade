@@ -192,11 +192,45 @@
   font-weight: bold;
   /* box-shadow: 0px 0px 30px 5px rgba(210, 242, 0, 0.25); */
 }
+.button-buy {
+  cursor: pointer;
+  border: none;
+  border-radius: 5rem;
+  background: var(--tertiary-color);
+  color: var(--primary-color);
+  min-width: 40rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  /* box-shadow: 0px 0px 30px 5px rgba(210, 242, 0, 0.25); */
+}
 
+.button-whats {
+  cursor: pointer;
+  border: none;
+  border-radius: 5rem;
+  background: #1BD741;
+  color: #ffffff;
+  min-width: 40rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  max-width: 60rem;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  /* box-shadow: 0px 0px 30px 5px rgba(210, 242, 0, 0.25); */
+}
+
+.button-whats img {
+  width: 42px;
+  height: 42px;
+}
 /* Depoimentos */
 .card {
-  width: 40rem;
-  min-height: 35rem;
+  width: 36rem;
+  min-height: 33  rem;
   border-radius: 1rem;
   background-color: var(--light-gray-color);
   vertical-align: top;
@@ -204,6 +238,7 @@
 
 .cardUp {
   flex: 1;
+  min-height: 40rem !important;
 }
 
 .card img {
@@ -1016,6 +1051,9 @@ sup {
 }
 
 @media (max-width: 1000px) {
+  .cardUp{
+    flex: none;
+  }
   .third-panel {
     padding: 2rem 5rem;
   }
@@ -1031,6 +1069,13 @@ sup {
 }
 
 @media (max-width: 860px) {
+  .button-buy {
+    min-width: 30rem;
+  }
+
+  .button-whats {
+    min-width: 30rem;
+  }
   .assurance-content {
     max-width: 90vw;
   }
@@ -1246,10 +1291,6 @@ sup {
     margin: 0;
   }
 
-  .cardUp {
-    flex-direction: column;
-  }
-
   .details {
     grid-area: details;
     display: flex;
@@ -1266,6 +1307,10 @@ sup {
   }
 
   .button-access {
+    min-width: 20rem;
+  }
+  
+  .button-whats {
     min-width: 20rem;
   }
 }
