@@ -42,6 +42,10 @@
   margin-bottom: 1.5rem;
 }
 
+.intro-content .subheadline{
+  font-size: 2.5rem;
+}
+
 .content-header {
   position: relative;
   align-self: end;
@@ -101,6 +105,10 @@
   justify-content: center;
   align-content: center;
   font-size: 1.3rem;
+}
+
+.intro-text-content span{
+  font-weight: bold;
 }
 
 .video-container {
@@ -198,7 +206,7 @@
   border-radius: 5rem;
   background: var(--tertiary-color);
   color: var(--primary-color);
-  min-width: 40rem;
+  width: 40rem;
   padding: 1rem 1.5rem;
   font-size: 1.6rem;
   font-weight: bold;
@@ -319,10 +327,14 @@
   grid-template-rows: 1fr 1fr;
   gap: 1rem;
   grid-auto-flow: row;
+  padding: 1rem;
 }
 
 .tools {
   grid-area: tools;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .detail-card {
@@ -368,10 +380,14 @@
   width: 100%;
 }
 
+.tools .img-container img{
+  border-radius: 3px;
+}
+
 .tools .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   gap: 1rem;
   grid-auto-flow: row;
 }
@@ -432,20 +448,22 @@
   font-size: 1.6rem;
 }
 
-.news-grid-text.grid-bar::after {
-  content: '';
-  position: absolute;
-  background-color: var(--white-color);
-  transform: translate(-50%, -50%);
-  width: 7rem;
-  height: 2px;
-  top: 110%;
-  right: 33%;
+.news-grid-text  p {
+  text-align: center;
+  margin-bottom: 1rem; 
 }
 
-.news-grid-text p {
+.gray-text, .news-grid-text li{
+  color: #9C9C9C;
+}
+
+.grid-news ul{
+  margin-top: 2rem;
+  list-style: none;
+}
+
+.grid-news ul{
   text-align: center;
-  margin-bottom: 1rem;
 }
 
 /* CSS Terceira seção*/
@@ -640,17 +658,17 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  max-width: 100%;
   text-align: center;
-  margin-top: 4rem;
+  margin-top: 1rem;
 }
 
 .whole {
-  display: inline-block;
+  
   background: var(--light-gray-color);
   border-radius: 2rem;
   border: 2px solid white;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .whole.best-plan {
@@ -658,9 +676,8 @@
 }
 
 .type {
-  width: 25rem;
-  height: 6rem;
-  margin-bottom: 1rem;
+  height: 4rem;
+  margin: 0 auto;
 }
 
 .type p {
@@ -670,11 +687,11 @@
   color: white;
   text-align: center;
   padding-top: 1rem;
+  margin-bottom: 0;
 }
 
 .plan {
   max-width: 60rem;
-  font-style: condensed;
   font-size: 2rem;
   color: white;
   text-align: center;
@@ -740,7 +757,7 @@ sup {
 }
 
 .content ul {
-  list-style: none;
+  /* list-style: none; */
   font-size: 2rem;
   color: var(--white-color);
 }
@@ -750,6 +767,14 @@ sup {
   vertical-align: center;
   min-height: 3rem;
   line-height: 4rem;
+}
+
+.content .fa-ul>li {
+  position:initial; 
+}
+
+i{
+  margin-right: 1rem;
 }
 
 #payment-section .news-content {
@@ -1066,11 +1091,30 @@ sup {
     padding: 0 3.5rem;
   }
 
+  .container {
+    min-height: 80vh;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr;
+    gap: 1rem 1rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "details vitrines vitrines"
+        "details vitrines vitrines"
+        "details tools tools";
+}
+
+  .vitrines {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; 
+  }
+
 }
 
 @media (max-width: 860px) {
   .button-buy {
-    min-width: 30rem;
+    width: 20rem;
   }
 
   .button-whats {
@@ -1222,9 +1266,9 @@ sup {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 7rem 7rem 7rem;
-    grid-template-areas: "value1 bar1 role1"
-      "value2 bar2 role2"
-      "value3 bar3 role3";
+    grid-template-areas: "role1 bar1 value1"
+      "role2 bar2 value2"
+      "role3 bar3 value3";
     row-gap: 0rem;
     column-gap: 1rem;
     text-align: center;
@@ -1258,6 +1302,19 @@ sup {
 
   .salary-grid-container .bar3 div {
     width: 12rem;
+  }
+
+  .tools .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    /* grid-auto-flow: row; */
+    justify-content: center;
+  }
+
+  .type p {
+    font-size: 2rem;
   }
 }
 
@@ -1312,5 +1369,9 @@ sup {
   
   .button-whats {
     min-width: 20rem;
+  }
+
+  .card{
+    max-width: 30rem;
   }
 }
