@@ -46,3 +46,9 @@ body .full-width {
   color: var(--secondary-color) ;
   font-weight: 600;
 }
+
+.icon::marker {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
